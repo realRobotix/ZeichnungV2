@@ -10,8 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 /**
  * Leinwand ist eine Klasse, die einfache Zeichenoperationen auf einer
@@ -42,7 +41,7 @@ public class Canvas {
      */
     public static Canvas getCanvas() {
         if (canvasSingleton == null) {
-            canvasSingleton = new Canvas("BlueJ Figuren Demo", 700, 500,
+            canvasSingleton = new Canvas("BlueJ Figuren Demo", 700, 700,
                     Color.white);
             canvasSingleton.setzeSichtbarkeit(true);
         }
@@ -79,7 +78,7 @@ public class Canvas {
      */
     private Canvas(String titel, int breite, int hoehe, Color grundfarbe) {
         fenster = new JFrame();
-        fenster.setFocusable(false);
+        fenster.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         zeichenflaeche = new Zeichenflaeche();
         fenster.setContentPane(zeichenflaeche);
         fenster.setTitle(titel);

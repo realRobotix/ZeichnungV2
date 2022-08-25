@@ -4,17 +4,17 @@ public class Zeichnung {
     private final Square square;
 
     public Zeichnung() {
-        this.square = new Square(100, 100, 0, 100, Color.red);
+        this.square = new Square(100, 50, 75, 100, Color.red);
     }
 
     public void zeichne() {
-        Canvas canvas = Canvas.getCanvas();
         this.square.draw();
 
-        for(int i = 0; i < 10; ++i) {
-            this.square.morph(50, 200, 200, 70, Color.green, 5000, 10);
-            this.square.morph(100, 100, 0, 100, Color.red, 5000, 10);
+        while (true) {
+            this.square.morph(50, 100, 600, 75, Color.green, 1000, 2);
+            this.square.morph(100, 50, 575, 600, Color.blue, 1000, 2);
+            this.square.morph(50, 100, 100, 575, Color.green, 5000, 2);
+            this.square.morph(100, 50, 75, 100, Color.red, 5000, 2);
         }
-
     }
 }

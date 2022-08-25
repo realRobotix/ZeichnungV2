@@ -38,7 +38,7 @@ public class Square {
 
             try {
                 Thread.sleep((long) refreshRate);
-            } catch (Exception var20) {
+            } catch (Exception ignored) {
             }
         }
 
